@@ -1,11 +1,18 @@
 /*
 @Description : 
-@Author : Likhita & Manasi 
+@Author : Manasi 
 @Date : 11/15/2026
 */
 
-//module alu(input logic [31:0] a, b,
-//			  input logic [2:0] alucontrol,
-//			  output logic [31:0] result);
-//			  
-//endmodule
+module alu(
+	input reg [31:0] a,
+   input reg [31:0] b,
+   input reg [2:0] alucontrol,
+   output reg [31:0] aluresult
+   output reg zero
+);
+
+
+			   
+			  
+endmodule
