@@ -18,6 +18,12 @@ Likhita - ADD,XOR, STL, BEQ
 Manasi : SUB, AND, OR, ADDI, LW, SW, J, BNE, 
 
 
+#### NEXT target in list:
+Need to finish Sign Extension
+Control Unit and ALU Control 
+Branch Jump Logic
+
+
 ### DESIGN PROCESSS
 There are 2 parts:
 1) Datapath : operates on words of data. Memory, registers, ALUs and MUX (all 32bit)
