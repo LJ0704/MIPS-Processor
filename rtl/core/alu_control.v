@@ -25,33 +25,33 @@ module alu_control(
 				2'b10:
 					begin
 						case (funct)
-							6'100000: //add 
+							6'b100000: //add 
 								begin 
-									alucontrol = 3'010;
+									alucontrol = 3'b010;
 								end
-							6'100010: //sub
+							6'b100010: //sub
 								begin 
-									alucontrol = 3'110;
+									alucontrol = 3'b110;
 								end
-							6'100100: //and
+							6'b100100: //and
 								begin 
-									alucontrol = 3'000;
+									alucontrol = 3'b000;
 								end
-							6'100101: //or
+							6'b100101: //or
 								begin 
-									alucontrol = 3'001;
+									alucontrol = 3'b001;
 								end
-							6'101010: //slt  
+							6'b101010: //slt  
 								begin 
-									alucontrol = 3'111;
+									alucontrol = 3'b111;
 								end
-							6'100110: //xor
+							6'b100110: //xor
 								begin 
-									alucontrol = 3'100;
+									alucontrol = 3'b100;
 								end
 							default:
 								begin 
-									alucontrol = 3'010;
+									alucontrol = 3'b010;
 								end
 						endcase
 					end

@@ -10,13 +10,12 @@ module control(
 	output reg regwrite,
 	output reg regdst,
 	output reg branch,
+	output reg branch_ne,
 	output reg jump,
-	output reg memread,
 	output reg memtoreg,
-	output reg [1:0] alucontrol,
+	output reg [1:0] aluop,
 	output reg memwrite,
-	output reg alusrc,
-	output reg memwrite
+	output reg alusrc
 );
 	always @(*) 
 		begin 
@@ -26,6 +25,7 @@ module control(
 			memtoreg = 1'b0;
 			memwrite = 1'b0;
 			branch = 1'b0;
+			branch_ne = 1'b0;
 			jump = 1'b0;
 			aluop = 2'b00;
 			
@@ -36,11 +36,11 @@ module control(
 						regdst = 1'b1;
 						aluop = 2'b10;
 					end
-				6'b001000: //addi tuper instruction 
+				6'b001000: //addi instruction 
 					begin
 						regwrite = 1'b1;
-						regdst = 1'b0;
-						aluop = 2'00;
+						alusrc = 1'b1;
+						aluop = 2'b00;
 					end
 				6'b000010: //j
 					begin
@@ -63,6 +63,12 @@ module control(
 					begin              
 						branch = 1'b1;
 						aluop  = 2'b01;
+					end
+				6'b0000010: //bne
+					begin
+						branch = 1'b1;
+						branch_ne = 1'b1;
+						aluop = 2'b01;
 					end
 				default:
 					begin
