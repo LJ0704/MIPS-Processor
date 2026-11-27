@@ -12,6 +12,6 @@ module sign_extend(
 	output wire [31:0]signimm
 );
 	
-		assign signim = {{16{instr[15]}}, instr[15:0]};
+	assign signimm = {{16{instr[15]}}, instr[15:0]};
 		
 endmodule

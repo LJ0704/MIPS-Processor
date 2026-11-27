@@ -20,9 +20,7 @@ module program_counter(
 			else
 				pc <= next_pc; //retains the previous value of pc in between the clock edge
 				
-		end
-	end
-	
+		end	
 endmodule
 
 	

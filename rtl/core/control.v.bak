@@ -1,0 +1,5 @@
+/*
+@Description : Main control unit. Decodes opcode into datapath control signals.
+@Author : Likhita Jonnakuti
+@Date : 11/26/2026
+*/

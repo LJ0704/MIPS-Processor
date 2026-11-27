@@ -24,10 +24,7 @@ module data_memory(
 	assign RD = memory[A[9:2]];
 	
 	always @ (posedge clock)
-		if (WE) 
-			begin
-				memory[A[9:2]] <= WD;
-		end
-	end
+		if (WE)
+			memory[A[9:2]] <= WD;
 endmodule
 		

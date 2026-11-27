@@ -1,0 +1,7 @@
+/*
+@Description : ALU decoder which converts ALU opcode (from the controller) and function (from the instruction memory)
+					into 3 bit ALU operation
+@Author : Likhita Jonnakuti
+@Date : 11/25/2026
+*/
+
