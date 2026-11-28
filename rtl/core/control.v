@@ -64,7 +64,7 @@ module control(
 						branch = 1'b1;
 						aluop  = 2'b01;
 					end
-				6'b0000010: //bne
+				6'b000101: //bne
 					begin
 						branch = 1'b1;
 						branch_ne = 1'b1;
